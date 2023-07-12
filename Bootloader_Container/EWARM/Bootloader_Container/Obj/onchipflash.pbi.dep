@@ -1,0 +1,3 @@
+onchipflash.pbi: \
+  D:\Project_STM32\Bootloader_Container\user_onchip_flash\onchipflash.h \
+  D:\Project_STM32\Bootloader_Container\user_onchip_flash\onchipflash.c

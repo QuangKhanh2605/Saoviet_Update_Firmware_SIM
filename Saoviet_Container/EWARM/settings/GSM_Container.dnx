@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<settings>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <StLinkDriver>
+        <stlinkserialNo>31531457</stlinkserialNo>
+        <stlinkfoundProbes />
+        <CStepIntDis>_ 0</CStepIntDis>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>2</stlinkResetStrategy>
+    </StLinkDriver>
+    <DebugChecksum>
+        <Checksum>2266272764</Checksum>
+    </DebugChecksum>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+        <InstrCount>0</InstrCount>
+    </Disassembly>
+    <CodeCoverage>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+        <HideCovered>0</HideCovered>
+    </CodeCoverage>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <SWOTraceHWSettings>
+        <OverrideDefaultClocks>0</OverrideDefaultClocks>
+        <CpuClock>32000000</CpuClock>
+        <ClockAutoDetect>0</ClockAutoDetect>
+        <ClockWanted>2000000</ClockWanted>
+        <JtagSpeed>2000000</JtagSpeed>
+        <Prescaler>16</Prescaler>
+        <TimeStampPrescIndex>0</TimeStampPrescIndex>
+        <TimeStampPrescData>0</TimeStampPrescData>
+        <PcSampCYCTAP>1</PcSampCYCTAP>
+        <PcSampPOSTCNT>15</PcSampPOSTCNT>
+        <PcSampIndex>0</PcSampIndex>
+        <DataLogMode>0</DataLogMode>
+        <ITMportsEnable>0</ITMportsEnable>
+        <ITMportsTermIO>0</ITMportsTermIO>
+        <ITMportsLogFile>0</ITMportsLogFile>
+        <ITMlogFile>$PROJ_DIR$\ITM.log</ITMlogFile>
+    </SWOTraceHWSettings>
+    <SfrWindow>
+        <Show>1 1</Show>
+        <Sort>4 0</Sort>
+    </SfrWindow>
+    <struct_types>
+        <Fmt0>ID_Server_Receive-ID_u32	4	0</Fmt0>
+        <Fmt1>ST_TIME_FORMAT-date	3	0</Fmt1>
+        <Fmt2>ST_TIME_FORMAT-day	3	0</Fmt2>
+        <Fmt3>ST_TIME_FORMAT-hour	3	0</Fmt3>
+        <Fmt4>ST_TIME_FORMAT-min	3	0</Fmt4>
+        <Fmt5>ST_TIME_FORMAT-month	3	0</Fmt5>
+        <Fmt6>ST_TIME_FORMAT-sec	3	0</Fmt6>
+        <Fmt7>ST_TIME_FORMAT-year	3	0</Fmt7>
+        <Fmt8>Struct_Queue_Type-LenQueue_u8	3	0</Fmt8>
+        <Fmt9>Struct_Queue_Type-NumWaiting_u8	3	0</Fmt9>
+        <Fmt10>Struct_Queue_Type-SizeItem_u8	3	0</Fmt10>
+        <Fmt11>sMemHandleWrite-Addr_u32	4	0</Fmt11>
+        <Fmt12>sMemHandleWrite-Pending_u8	3	0</Fmt12>
+        <Fmt13>sMemHandleWrite-TypeData_u8	3	0</Fmt13>
+        <Fmt14>sMemoryManager-Status_u8	3	0</Fmt14>
+        <Fmt15>sRecordMemoryManager-AddAStart_u32	4	0</Fmt15>
+        <Fmt16>sRecordMemoryManager-AddAStop_u32	4	0</Fmt16>
+        <Fmt17>sRecordMemoryManager-AddA_u32	4	0</Fmt17>
+        <Fmt18>sRecordMemoryManager-AddBStart_u32	4	0</Fmt18>
+        <Fmt19>sRecordMemoryManager-AddBStop_u32	4	0</Fmt19>
+        <Fmt20>sRecordMemoryManager-AddB_u32	4	0</Fmt20>
+        <Fmt21>sRecordMemoryManager-AddIndexSave_u32	4	0</Fmt21>
+        <Fmt22>sRecordMemoryManager-AddIndexSend_u32	4	0</Fmt22>
+        <Fmt23>sRequestATcmd-Port_u8	3	0</Fmt23>
+        <Fmt24>sRequestATcmd-Status_u8	3	0</Fmt24>
+        <Fmt25>sRequestATcmd-TypeData_u8	3	0</Fmt25>
+        <Fmt26>structFloatValue-Unit_u16	4	0</Fmt26>
+    </struct_types>
+    <watch_formats>
+        <Fmt0>{W}1:i	3	0</Fmt0>
+        <Fmt1>{W}1:j	3	0</Fmt1>
+        <Fmt2>{W}42:CountGetDataFail_u8	3	0</Fmt2>
+        <Fmt3>{W}42:ID_server	4	0</Fmt3>
+        <Fmt4>{W}42:ID_server_u32	4	0</Fmt4>
+        <Fmt5>{W}42:MarkResetDaily	3	0</Fmt5>
+        <Fmt6>{W}42:TaskStatus_u8	3	0</Fmt6>
+        <Fmt7>{W}42:c	3	0</Fmt7>
+        <Fmt8>{W}42:check	3	0</Fmt8>
+        <Fmt9>{W}42:check_count	3	0</Fmt9>
+        <Fmt10>{W}42:check_length	3	0</Fmt10>
+        <Fmt11>{W}42:config_IVT	3	0</Fmt11>
+        <Fmt12>{W}42:config_IVT_u8	3	0</Fmt12>
+        <Fmt13>{W}42:config_KDE	3	0</Fmt13>
+        <Fmt14>{W}42:connect_IVT	4	0</Fmt14>
+        <Fmt15>{W}42:connect_IVT_u8	4	0</Fmt15>
+        <Fmt16>{W}42:connect_KDE	4	0</Fmt16>
+        <Fmt17>{W}42:count	3	0</Fmt17>
+        <Fmt18>{W}42:count_error	3	0</Fmt18>
+        <Fmt19>{W}42:count_length	3	0</Fmt19>
+        <Fmt20>{W}42:count_ms	3	0</Fmt20>
+        <Fmt21>{W}42:count_success	3	0</Fmt21>
+        <Fmt22>{W}42:max	3	0</Fmt22>
+        <Fmt23>{W}42:permit_run_stop_485_IVT	3	0</Fmt23>
+        <Fmt24>{W}42:response_KDE200	3	0</Fmt24>
+        <Fmt25>{W}42:run_stop_IVT	4	0</Fmt25>
+        <Fmt26>{W}42:run_stop_KDE	3	0</Fmt26>
+        <Fmt27>{W}42:sAppMem.PendingNewMess_u8	3	0</Fmt27>
+        <Fmt28>{W}42:sAppSimVar.IsGetGPS_u8	3	0</Fmt28>
+        <Fmt29>{W}42:sAppSimVar.sGPS.Index_u8	3	0</Fmt29>
+        <Fmt30>{W}42:sAppSimVar.sGPS.Status_u8	3	0</Fmt30>
+        <Fmt31>{W}42:sExFlash.Retry_u8	3	0</Fmt31>
+        <Fmt32>{W}42:sExFlash.Status_u8	3	0</Fmt32>
+        <Fmt33>{W}42:sExFlash.sHErase.Addr_u32	4	0</Fmt33>
+        <Fmt34>{W}42:sExFlash.sHWrite.Pending_u8	3	0</Fmt34>
+        <Fmt35>{W}42:sModem.IsDutyCycle_u8	3	0</Fmt35>
+        <Fmt36>{W}42:sOnFlash.Status_u8	3	0</Fmt36>
+        <Fmt37>{W}42:sSimCommon.PowerStatus_u8	3	0</Fmt37>
+        <Fmt38>{W}42:sSimCommon.sGPS.Status_u8	3	0</Fmt38>
+        <Fmt39>{W}42:sSimVar.IsRunningATcmd_u8	3	0</Fmt39>
+        <Fmt40>{W}42:test	4	0</Fmt40>
+    </watch_formats>
+    <Trace2>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+    </Trace2>
+    <SWOTraceWindow>
+        <PcSampling>0</PcSampling>
+        <InterruptLogs>0</InterruptLogs>
+        <ForcedTimeStamps>0</ForcedTimeStamps>
+        <EventCPI>0</EventCPI>
+        <EventEXC>0</EventEXC>
+        <EventFOLD>0</EventFOLD>
+        <EventLSU>0</EventLSU>
+        <EventSLEEP>0</EventSLEEP>
+    </SWOTraceWindow>
+    <DataLog>
+        <Title_0>RtCountSystick_u32</Title_0>
+        <Symbol_0>0 4 1</Symbol_0>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+    </DataLog>
+    <InterruptLog>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+        <SumSortOrder>0</SumSortOrder>
+    </InterruptLog>
+    <EventLog>
+        <Title_0>Ch3</Title_0>
+        <Symbol_0>0 0 1</Symbol_0>
+        <Title_1>Ch2</Title_1>
+        <Symbol_1>0 0 1</Symbol_1>
+        <Title_2>Ch1</Title_2>
+        <Symbol_2>0 0 1</Symbol_2>
+        <Title_3>Ch0</Title_3>
+        <Symbol_3>0 0 1</Symbol_3>
+        <LogEnabled>0</LogEnabled>
+        <GraphEnabled>0</GraphEnabled>
+        <ShowTimeLog>1</ShowTimeLog>
+        <SumEnabled>0</SumEnabled>
+        <ShowTimeSum>1</ShowTimeSum>
+        <SumSortOrder>0</SumSortOrder>
+    </EventLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 1 "EMUL_DATA_LOG" "RtCountSystick_u32" 0 0</Bp0>
+        <Count>1</Count>
+    </Breakpoints2>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
+    <Aliases>
+        <A0>_ "E:\6.2023\3.container_gsm_gps\Drivers\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c" ""</A0>
+        <A1>_ "E:\8.2023\3.GSM_Container\Drivers\STM32L1xx_HAL_Driver\Src\stm32l1xx_hal_adc.c" ""</A1>
+        <Count>2</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
+    <DriverProfiling>
+        <Enabled>0</Enabled>
+        <Mode>3</Mode>
+        <Graph>0</Graph>
+        <Symbiont>0</Symbiont>
+        <Exclusions />
+    </DriverProfiling>
+    <CallStackLog>
+        <Enabled>0</Enabled>
+    </CallStackLog>
+    <CallStackStripe>
+        <ShowTiming>1</ShowTiming>
+    </CallStackStripe>
+</settings>

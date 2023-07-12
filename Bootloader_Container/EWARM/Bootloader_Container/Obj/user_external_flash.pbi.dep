@@ -1,0 +1,3 @@
+user_external_flash.pbi: \
+  D:\Project_STM32\Bootloader_Container\user_external_flash\user_external_flash.c \
+  D:\Project_STM32\Bootloader_Container\user_external_flash/user_external_flash.h
