@@ -25,9 +25,9 @@ OBIS ben duoi cho phu hop.
         -Permit Run/Stop 485
         -Lock Run/Stop 485
 
--   "at+ivtwriteD=" Default Inverter (8 Byte)
-    + (2 Byte) ID Inverter (KDE200: 0x01)
-    + (2 Byte) Scale Inverter (KDE200: 0xFF)
+-   "at+ivtwriteD=" Default Inverter (6 Byte)
+    + (1 Byte) ID Inverter (KDE200: 0x01)
+    + (1 Byte) Scale Inverter (KDE200: 0xFF)
 
     Scale
     00->1 
@@ -47,8 +47,8 @@ OBIS ben duoi cho phu hop.
 *Note: Neu Stop = Run. Khong dieu khien Inverter qua RS485
 
 -   "at+ivtwriteC=" Config register (6 Byte)
-    + (2 Byte) Thu tu thanh ghi
-    + (2 Byte) Tong thanh ghi can cau hinh
+    + (1 Byte) Thu tu thanh ghi
+    + (1 Byte) Tong thanh ghi can cau hinh
     + (2 Byte) Addr register
     + (2 Byte) Thong tin register can cau hinh
 *Note: - Neu doc du lieu tu thanh ghi dau tien ma khong dung voi trang thai can
@@ -167,7 +167,7 @@ static const uint16_t LED_PIN[3] = {LED_1_Pin, LED_2_Pin, LED_3_Pin};
 static uint8_t _Entry_IVT (uint8_t event)
 {
     fevent_active(sEventAppIVT, _EVENT_TEMH_LOG_TSVH);
-
+    
     return 1;
 }
 
@@ -1207,108 +1207,6 @@ void AppIVT_Log_Data_TSVH (void)
     
     Length = AppIVT_Packet_TSVH (&aMessData[0]);
     AppMem_Push_Mess_To_Queue_Write(_FLASH_TYPE_DATA_TSVH_A, &aMessData[0], Length);
-}
-
-
-
-void AppIVT_Init_Thresh_Measure (void)
-{
-    uint8_t 	temp = 0xFF;
-	uint8_t		Buff_temp[16] = {0};
-      
-	// Doc gia tri cau hinh threshold. Dung de check cac alarm
-    temp = *(__IO uint8_t*) ADDR_THRESH_MEAS;    //2 byte
-	if (temp != FLASH_BYTE_EMPTY)   //  Doc cau hinh so lan retry send cua 1 ban tin
-    {
-        OnchipFlashReadData(ADDR_THRESH_MEAS, &Buff_temp[0], 16);
-        //
-        sMeterThreshold.FlowHigh    = (Buff_temp[2] << 8) | Buff_temp[3];
-        sMeterThreshold.FlowLow     = (Buff_temp[4] << 8) | Buff_temp[5];
-        
-        sMeterThreshold.PeakHigh    = (Buff_temp[6] << 8) | Buff_temp[7];
-        sMeterThreshold.PeakLow     = (Buff_temp[8] << 8) | Buff_temp[9];
-        
-        sMeterThreshold.LowBatery   = Buff_temp[10];
-        
-        sMeterThreshold.LevelHigh   = (Buff_temp[11] << 8) | Buff_temp[12];
-        sMeterThreshold.LevelLow    = (Buff_temp[13] << 8) | Buff_temp[14];
-    } else
-    {
-        AppIVT_Save_Thresh_Measure();
-    }    
-}
-
-
-
-void AppIVT_Save_Thresh_Measure (void)
-{
-    uint8_t aTEMP_THRESH[24] = {0};
-    
-    aTEMP_THRESH[0] = BYTE_TEMP_FIRST;
-    aTEMP_THRESH[1] = 13;
-
-    aTEMP_THRESH[2] = (sMeterThreshold.FlowHigh >> 8) & 0xFF;
-    aTEMP_THRESH[3] = sMeterThreshold.FlowHigh & 0xFF;
-    
-    aTEMP_THRESH[4] = (sMeterThreshold.FlowLow >> 8) & 0xFF;
-    aTEMP_THRESH[5] = sMeterThreshold.FlowLow & 0xFF;
-     
-    aTEMP_THRESH[6] = (sMeterThreshold.PeakHigh >> 8) & 0xFF;  
-    aTEMP_THRESH[7] = sMeterThreshold.PeakHigh & 0xFF;
-    
-    aTEMP_THRESH[8] = (sMeterThreshold.PeakLow >> 8) & 0xFF;
-    aTEMP_THRESH[9] = sMeterThreshold.PeakLow & 0xFF;
-    
-    aTEMP_THRESH[10] = sMeterThreshold.LowBatery;
-    
-    aTEMP_THRESH[11] = (sMeterThreshold.LevelHigh >> 8) & 0xFF;
-    aTEMP_THRESH[12] = sMeterThreshold.LevelHigh & 0xFF;
-    
-    aTEMP_THRESH[13] = (sMeterThreshold.LevelLow >> 8) & 0xFF;
-    aTEMP_THRESH[14] = sMeterThreshold.LevelLow & 0xFF;
-
-
-    OnchipFlashPageErase(ADDR_THRESH_MEAS);
-    OnchipFlashWriteData(ADDR_THRESH_MEAS, &aTEMP_THRESH[0], 16);
-}
-
-	 
-void AppIVT_Init_Slave_ID (void)
-{
-    uint8_t 	temp = 0xFF;
-    //Doc List Slave ra
-    temp = *(__IO uint8_t*) ADDR_SLAVE_ID;  
-	if (temp != FLASH_BYTE_EMPTY) 
-	{
-        sTempHumi.NumSlave_u8 = *(__IO uint8_t*) (ADDR_SLAVE_ID + 2); 
-        
-        if (sTempHumi.NumSlave_u8 >= MAX_SLAVE) 
-            sTempHumi.NumSlave_u8 = MAX_SLAVE;
-        
-        OnchipFlashReadData (ADDR_SLAVE_ID + 3, &sTempHumi.aSlaveID[0], sTempHumi.NumSlave_u8);
-    } else
-    {
-        AppIVT_Save_Slave_ID();
-    }  
-    
-}
-
-void AppIVT_Save_Slave_ID (void)
-{
-    uint8_t aTEMP[64] = {0};
-    uint8_t Count = 0;
-    
-    aTEMP[Count++] = BYTE_TEMP_FIRST;
-    aTEMP[Count++] = sTempHumi.NumSlave_u8 + 1;
-    aTEMP[Count++] = sTempHumi.NumSlave_u8;
-        
-    for (uint8_t i = 0; i < sTempHumi.NumSlave_u8; i++)
-    {
-        aTEMP[Count++] = sTempHumi.aSlaveID[i];
-    }
-    
-    OnchipFlashPageErase(ADDR_SLAVE_ID);
-    OnchipFlashWriteData(ADDR_SLAVE_ID, &aTEMP[0], 64);
 }
 
 void AppIVT_Init (void)

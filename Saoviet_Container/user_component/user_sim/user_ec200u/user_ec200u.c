@@ -438,7 +438,7 @@ const sCommand_Sim_Struct aSimEC200UStep[] =
     {   _SIM_FTP_LOGIN, 	        at_callback_success,             at_callback_failure,        "QFTPOPEN: 0",   "AT+QFTPOPEN=\"124.158.5.154\"\r"   	},
     {   _SIM_FTP_DIRECTORY, 	    at_callback_success,             at_callback_failure,        "QFTPCWD: 0",    "AT+QFTPCWD=\"/FTP/khanh\"\r"   	},
     {   _SIM_FTP_GET_DIRECTORY, 	at_callback_success,             at_callback_failure,        "QFTPPWD: 0",    "AT+QFTPPWD\r"  	},
-    {   _SIM_FTP_SIZE_FILE, 	    _CbFTP_GET_SIZE,                 at_callback_failure,        "QFTPSIZE: 0",   "AT+QFTPSIZE=\"firm.bin\"\r"   	},
+    {   _SIM_FTP_SIZE_FILE, 	    _CbFTP_GET_SIZE,                 at_callback_failure,        "QFTPSIZE",   "AT+QFTPSIZE=\"firm.bin\"\r"   	},
     {   _SIM_FTP_GET_1, 	        _CbFTP_GET_1,                    at_callback_failure,        NULL,            "AT+QFTPGET=\"firm.bin\",\"COM:\","   	},
     {   _SIM_FTP_GET_2, 	        _CbFTP_GET_2,                    at_callback_failure,        "CONNECT",            "\r"   	},
    

@@ -62,6 +62,8 @@ stm32l1xx_it.pbi: \
   D:\Project_STM32\Saoviet_Container\EWARM/../Core/Inc\spi.h \
   D:\Project_STM32\Saoviet_Container\EWARM\..\user_component\user_mem\user_mem_comm.h \
   D:\Project_STM32\Saoviet_Container\EWARM\..\user_app\user_app_update\user_app_update.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\string.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\arm\inc\c\DLib_Product_string.h \
   D:\Project_STM32\Saoviet_Container\EWARM\..\user_app\user_app_sim/user_mqtt.h \
   D:\Project_STM32\Saoviet_Container\EWARM\..\user_app\user_app_inverter\user_app_inverter.h \
   D:\Project_STM32\Saoviet_Container\EWARM\..\user_util\user_adc.h \

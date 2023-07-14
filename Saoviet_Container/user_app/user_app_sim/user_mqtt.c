@@ -1074,7 +1074,7 @@ void _rUPDATE_FIRMWARE(sData *str_Receiv,int16_t Pos)
                 for (i = 0; i < TempLeng; i++)
                 TempU16 = (TempU16 << 8 ) | *(str_Receiv->Data_a8 + PosFix++);
                 sUpdate_Firmware.CRC_Recv = TempU16;
-                DCU_Respond(2, (uint8_t *)"OK", 2, 0);
+                //DCU_Respond(2, (uint8_t *)"OK", 2, 0);
                 break;
 
             default:

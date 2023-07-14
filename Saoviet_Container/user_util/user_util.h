@@ -51,7 +51,7 @@
 #define DBLEVEL_M        2       /*!< functional traces */
 #define DBLEVEL_H        3       /*!< all traces */
 
-#define _VLEVEL_DEBUG   DBLEVEL_L
+#define _VLEVEL_DEBUG   DBLEVEL_M
 
 
 #define pi 3.14159265358979323846

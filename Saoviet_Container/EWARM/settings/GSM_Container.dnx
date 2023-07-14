@@ -20,7 +20,7 @@
         <stlinkResetStrategy>2</stlinkResetStrategy>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>2266272764</Checksum>
+        <Checksum>2764727846</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -69,25 +69,27 @@
         <Fmt5>ST_TIME_FORMAT-month	3	0</Fmt5>
         <Fmt6>ST_TIME_FORMAT-sec	3	0</Fmt6>
         <Fmt7>ST_TIME_FORMAT-year	3	0</Fmt7>
-        <Fmt8>Struct_Queue_Type-LenQueue_u8	3	0</Fmt8>
-        <Fmt9>Struct_Queue_Type-NumWaiting_u8	3	0</Fmt9>
-        <Fmt10>Struct_Queue_Type-SizeItem_u8	3	0</Fmt10>
-        <Fmt11>sMemHandleWrite-Addr_u32	4	0</Fmt11>
-        <Fmt12>sMemHandleWrite-Pending_u8	3	0</Fmt12>
-        <Fmt13>sMemHandleWrite-TypeData_u8	3	0</Fmt13>
-        <Fmt14>sMemoryManager-Status_u8	3	0</Fmt14>
-        <Fmt15>sRecordMemoryManager-AddAStart_u32	4	0</Fmt15>
-        <Fmt16>sRecordMemoryManager-AddAStop_u32	4	0</Fmt16>
-        <Fmt17>sRecordMemoryManager-AddA_u32	4	0</Fmt17>
-        <Fmt18>sRecordMemoryManager-AddBStart_u32	4	0</Fmt18>
-        <Fmt19>sRecordMemoryManager-AddBStop_u32	4	0</Fmt19>
-        <Fmt20>sRecordMemoryManager-AddB_u32	4	0</Fmt20>
-        <Fmt21>sRecordMemoryManager-AddIndexSave_u32	4	0</Fmt21>
-        <Fmt22>sRecordMemoryManager-AddIndexSend_u32	4	0</Fmt22>
-        <Fmt23>sRequestATcmd-Port_u8	3	0</Fmt23>
-        <Fmt24>sRequestATcmd-Status_u8	3	0</Fmt24>
-        <Fmt25>sRequestATcmd-TypeData_u8	3	0</Fmt25>
-        <Fmt26>structFloatValue-Unit_u16	4	0</Fmt26>
+        <Fmt8>Struct_Param_FTP-Crc_File_u16	4	0</Fmt8>
+        <Fmt9>Struct_Queue_Type-LenQueue_u8	3	0</Fmt9>
+        <Fmt10>Struct_Queue_Type-NumWaiting_u8	3	0</Fmt10>
+        <Fmt11>Struct_Queue_Type-SizeItem_u8	3	0</Fmt11>
+        <Fmt12>Struct_Update-CRC_Recv	4	0</Fmt12>
+        <Fmt13>sMemHandleWrite-Addr_u32	4	0</Fmt13>
+        <Fmt14>sMemHandleWrite-Pending_u8	3	0</Fmt14>
+        <Fmt15>sMemHandleWrite-TypeData_u8	3	0</Fmt15>
+        <Fmt16>sMemoryManager-Status_u8	3	0</Fmt16>
+        <Fmt17>sRecordMemoryManager-AddAStart_u32	4	0</Fmt17>
+        <Fmt18>sRecordMemoryManager-AddAStop_u32	4	0</Fmt18>
+        <Fmt19>sRecordMemoryManager-AddA_u32	4	0</Fmt19>
+        <Fmt20>sRecordMemoryManager-AddBStart_u32	4	0</Fmt20>
+        <Fmt21>sRecordMemoryManager-AddBStop_u32	4	0</Fmt21>
+        <Fmt22>sRecordMemoryManager-AddB_u32	4	0</Fmt22>
+        <Fmt23>sRecordMemoryManager-AddIndexSave_u32	4	0</Fmt23>
+        <Fmt24>sRecordMemoryManager-AddIndexSend_u32	4	0</Fmt24>
+        <Fmt25>sRequestATcmd-Port_u8	3	0</Fmt25>
+        <Fmt26>sRequestATcmd-Status_u8	3	0</Fmt26>
+        <Fmt27>sRequestATcmd-TypeData_u8	3	0</Fmt27>
+        <Fmt28>structFloatValue-Unit_u16	4	0</Fmt28>
     </struct_types>
     <watch_formats>
         <Fmt0>{W}1:i	3	0</Fmt0>

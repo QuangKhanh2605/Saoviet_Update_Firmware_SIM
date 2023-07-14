@@ -251,12 +251,6 @@ extern IVT_Receive          sIVT_Recv;
 uint8_t     AppIVT_Task(void);
 void        AppIVT_Init (void);
 
-void        AppIVT_Init_Slave_ID (void);
-void        AppIVT_Save_Slave_ID (void);
-
-void        AppIVT_Init_Thresh_Measure (void);
-void        AppIVT_Save_Thresh_Measure (void);
-
 void        AppIVT_Log_Data_TSVH (void);
 uint8_t     AppIVT_Packet_TSVH (uint8_t *pData);
 void        Send_Command_IVT (uint8_t SlaveID, uint8_t Func_Code, uint16_t Addr_Register, uint16_t Infor_Register, void (*pFuncResetRecvData) (void)) ;
